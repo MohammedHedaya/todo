@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "108316433554",
+    "project_id": "todoo-ffa74",
+    "storage_bucket": "todoo-ffa74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108316433554:android:f8f7d4ef3a127ccca21a4b",
+        "android_client_info": {
+          "package_name": "com.example.todoo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN6StijwV3q0RcF3-oLDq7nMoVTyR4lF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
