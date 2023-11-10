@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:todoo/screens/settings/setting_tab.dart';
 import 'package:todoo/screens/tasks/add_task_bottom_sheet.dart';
@@ -14,6 +15,8 @@ class HomeLayout extends StatefulWidget {
 }
 
 class _HomeLayoutState extends State<HomeLayout> {
+
+  final user=FirebaseAuth.instance.currentUser!;
   int index = 0;
   List<Widget> tabs = [TasksTab(), SettingsTab()];
 
@@ -24,6 +27,11 @@ class _HomeLayoutState extends State<HomeLayout> {
       backgroundColor: mintGreen,
       appBar: AppBar(
         title: Text("ToDo List"),
+        actions: [
+          IconButton(onPressed: (){
+            FirebaseAuth.instance.signOut();
+          }, icon: Icon(Icons.logout),)
+        ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(

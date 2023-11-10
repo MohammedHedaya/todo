@@ -33,7 +33,7 @@ class _TasksTabState extends State<TasksTab> {
           activeBackgroundDayColor: Colors.redAccent[100],
           dotsColor: Color(0xFF333A47),
           selectableDayPredicate: (date) => true,
-          locale: 'ar',
+          locale: 'en',
         ),
         Expanded(
           child: StreamBuilder<QuerySnapshot<TaskModel>>(
@@ -47,6 +47,7 @@ class _TasksTabState extends State<TasksTab> {
               }
               List<TaskModel> tasks =
                   snapshot.data?.docs.map((e) => e.data()).toList() ?? [];
+              print(tasks.length);
               return ListView.builder(
                 itemBuilder: (context, index) {
                   return TaskItem(tasks[index]);
